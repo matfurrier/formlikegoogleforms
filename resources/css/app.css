@@ -7,7 +7,6 @@
 .classBody{
     background-color:#ede7f6;
     padding: 10px;
-    
 }
 
 .classbotoes{
@@ -31,3 +30,7 @@ div.item {
     padding: 10px;
     margin: 10px;
  }
+
+.checkbox{
+    background-color: white;
+}

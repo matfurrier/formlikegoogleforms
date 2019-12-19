@@ -28,7 +28,19 @@
                 var novoItem = $("#itemRadio").clone().removeAttr('id'); // para não ter id duplicado
                 novoItem.children('input').val(''); //limpa o campo 
             $("#criarFormulario").append(novoItem);
+            });
+
+            $("#novoTextArea").click(function() {
+                var novoItem = $("#itemTextarea").clone().removeAttr('id'); // para não ter id duplicado
+                novoItem.children('input').val(''); //limpa o campo 
+            $("#criarFormulario").append(novoItem);
             });        
+
+            $("#novoSelect").click(function() {
+                var novoItem = $("#itemSelect").clone().removeAttr('id'); // para não ter id duplicado
+                novoItem.children('input').val(''); //limpa o campo 
+            $("#criarFormulario").append(novoItem);
+            }); 
         });
     
     </script>
@@ -103,19 +115,43 @@
                 </div>
             </div>
 
-              <!-- criar o campo Radio -->
+            <!-- criar o campo Radio -->
             <div class="form-group" id="itemRadio">
                 <label for="tituloPergunta">Titulo do Radio</label>
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <div class="input-group-text">
-                            <input type="radio" aria-label="Botão radio para acompanhar input text">
+                            <input type="radio" name="itemRadio"  aria-label="Botão radio para acompanhar input text">
                         </div>
                     </div>
                     <input type="text" class="form-control" placeholder="Inserir o titulo para pergunta">
                 </div>
             </div>
+
+            <!-- criar o campo TextArea -->
+            <div class="form-group" id="itemTextarea">
+                <label for="itemTextarea">Titulo para TextArea </label>
+                <input type="text" class="form-control" name="tituloItemTextArea" placeholder="Inserir o titulo para textArea">
+                <br>
+                <textarea class="form-control"  rows="3" name="itemTextarea"></textarea>
+            </div>
            
+            <!-- criar o campo Select -->
+            <div class="form-group" id="itemSelect">
+                <div class="form-group">
+                    <label for="itemSelect">Select</label>
+                    <input type="text" class="form-control" name="tituloItemTextArea" placeholder="Inserir o titulo para Select">
+                    <br>
+                    <select class="form-control" name="itemSelect">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+            </div>
+
         </form>
     </div>
 </div>

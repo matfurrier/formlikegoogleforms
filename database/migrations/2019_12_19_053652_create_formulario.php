@@ -16,9 +16,8 @@ class CreateFormulario extends Migration
         Schema::create('formulario', function (Blueprint $table) {
             $table->timestamps();
             $table->increments('id_formulario');
-            $table->string('titulo_formulario', 50);
-            $table->text('descricao_formulario')->nullable();
-
+            $table->string('ds_tituloformulario', 50);
+            $table->text('ds_descricaoformulario')->nullable();
         });
     }
 
